@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- My custom stylesheet import -->
+        <link rel="stylesheet" href="./styles.css">
+
+        <!-- Bootstrap imports -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1 class="title-text">Impossible Tic Tac Toe</h1>
+        <div class="centering-div">
+            <div class="game-board">
+                <h1 id="announcementText" class="announcement-text"></h1>
+                <div class="board-row">
+                    <div class="board-square border-bottom border-right" onclick="humanMove(0,0)">
+                        <h1 id="0,0" class="square-text"></h1>
+                    </div>
+                    <div class="board-square border-bottom border-right" onclick="humanMove(0,1)">
+                        <h1 id="0,1" class="square-text"></h1>
+                    </div>
+                    <div class="board-square border-bottom" onclick="humanMove(0,2)">
+                        <h1 id="0,2" class="square-text"></h1>
+                    </div>
+                </div>
+                <div class="board-row">
+                    <div class="board-square border-bottom border-right" onclick="humanMove(1,0)">
+                        <h1 id="1,0" class="square-text"></h1>
+                    </div>
+                    <div class="board-square border-bottom border-right" onclick="humanMove(1,1)">
+                        <h1 id="1,1" class="square-text"></h1>
+                    </div>
+                    <div class="board-square border-bottom" onclick="humanMove(1,2)">
+                        <h1 id="1,2" class="square-text"></h1>
+                    </div>
+                </div>
+                <div class="board-row">
+                    <div class="board-square border-right" onclick="humanMove(2,0)">
+                        <h1 id="2,0" class="square-text"></h1>
+                    </div>
+                    <div class="board-square border-right" onclick="humanMove(2,1)">
+                        <h1 id="2,1" class="square-text"></h1>
+                    </div>
+                    <div class="board-square" onclick="humanMove(2,2)">
+                        <h1 id="2,2" class="square-text"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./worstTTT.js"></script>
+    </body>
+</html>

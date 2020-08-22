@@ -1,0 +1,61 @@
+.centering-div {
+    /* positioning self */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* positioning content */
+    display: grid;
+    place-items: center;
+    text-align: center;
+    /* sizing self */
+    height: 100vh;
+    width: 100vw;
+}
+
+.title-text {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+/* Board Layout */
+
+.game-board {
+
+}
+
+.board-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.board-square {
+    width: 14vw;
+    min-width: 100px;
+    height: 14vw;
+    min-height: 100px;
+
+    display: grid;
+    place-items: center;
+}
+
+.border-bottom { 
+    border-bottom: solid;
+}
+
+.border-right {
+    border-right: solid;
+}
+
+/* Text */
+
+.square-text {
+    font-size: 10vw;
+}
+
+.announcement-text {
+    font-size: 3vw;
+    padding-bottom: 10px;
+}
