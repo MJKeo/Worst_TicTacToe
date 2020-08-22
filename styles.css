@@ -12,14 +12,6 @@
     width: 100vw;
 }
 
-.title-text {
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 15px;
-    font-size: 2vw;
-    font-weight: bold;
-}
-
 /* Board Layout */
 
 .game-board {
@@ -41,6 +33,14 @@
     place-items: center;
 }
 
+.board-square-phone {
+    width: 25vw;
+    height: 25vw;
+
+    display: grid;
+    place-items: center;
+}
+
 .border-bottom { 
     border-bottom: solid;
 }
@@ -55,7 +55,32 @@
     font-size: 10vw;
 }
 
+.square-text-phone {
+    font-size: 15vw;
+}
+
 .announcement-text {
     font-size: 3vw;
     padding-bottom: 10px;
+}
+
+.announcement-text-phone {
+    font-size: 10vw;
+    padding-bottom: 10px;
+}
+
+.title-text {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.title-text-phone {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 5vw;
+    font-weight: bold;
 }

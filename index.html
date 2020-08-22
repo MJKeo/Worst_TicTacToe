@@ -15,40 +15,40 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1 class="title-text">Impossible Tic Tac Toe</h1>
+        <h1 id="title" class="title-text">Impossible Tic Tac Toe</h1>
         <div class="centering-div">
             <div class="game-board">
                 <h1 id="announcementText" class="announcement-text"></h1>
                 <div class="board-row">
-                    <div class="board-square border-bottom border-right" onclick="humanMove(0,0)">
+                    <div id="1" class="board-square border-bottom border-right" onclick="humanMove(0,0)">
                         <h1 id="0,0" class="square-text"></h1>
                     </div>
-                    <div class="board-square border-bottom border-right" onclick="humanMove(0,1)">
+                    <div id="2" class="board-square border-bottom border-right" onclick="humanMove(0,1)">
                         <h1 id="0,1" class="square-text"></h1>
                     </div>
-                    <div class="board-square border-bottom" onclick="humanMove(0,2)">
+                    <div id="3" class="board-square border-bottom" onclick="humanMove(0,2)">
                         <h1 id="0,2" class="square-text"></h1>
                     </div>
                 </div>
                 <div class="board-row">
-                    <div class="board-square border-bottom border-right" onclick="humanMove(1,0)">
+                    <div id="4" class="board-square border-bottom border-right" onclick="humanMove(1,0)">
                         <h1 id="1,0" class="square-text"></h1>
                     </div>
-                    <div class="board-square border-bottom border-right" onclick="humanMove(1,1)">
+                    <div id="5" class="board-square border-bottom border-right" onclick="humanMove(1,1)">
                         <h1 id="1,1" class="square-text"></h1>
                     </div>
-                    <div class="board-square border-bottom" onclick="humanMove(1,2)">
+                    <div id="6" class="board-square border-bottom" onclick="humanMove(1,2)">
                         <h1 id="1,2" class="square-text"></h1>
                     </div>
                 </div>
                 <div class="board-row">
-                    <div class="board-square border-right" onclick="humanMove(2,0)">
+                    <div id="7" class="board-square border-right" onclick="humanMove(2,0)">
                         <h1 id="2,0" class="square-text"></h1>
                     </div>
-                    <div class="board-square border-right" onclick="humanMove(2,1)">
+                    <div id="8" class="board-square border-right" onclick="humanMove(2,1)">
                         <h1 id="2,1" class="square-text"></h1>
                     </div>
-                    <div class="board-square" onclick="humanMove(2,2)">
+                    <div id="9" class="board-square" onclick="humanMove(2,2)">
                         <h1 id="2,2" class="square-text"></h1>
                     </div>
                 </div>
@@ -56,5 +56,6 @@
         </div>
 
         <script src="./worstTTT.js"></script>
+        <script src="./phoneStyling.js"></script>
     </body>
 </html>
