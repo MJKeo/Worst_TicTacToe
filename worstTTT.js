@@ -83,11 +83,7 @@ function computerMove() {
 function endGame(winner) {
     if (winner != null) {
         // announce winner
-        if (winner == player.HUMAN) {
-            document.getElementById("announcementText").innerText = "You Win! (but do you really?)"
-        } else {
-            document.getElementById("announcementText").innerText = "You Lost? What? How?"
-        }
+        document.getElementById("announcementText").innerText = winner + " Wins!"
     } else {
         // announce tie
         document.getElementById("announcementText").innerText = "It's a tie!"
