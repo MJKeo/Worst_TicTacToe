@@ -83,7 +83,11 @@ function computerMove() {
 function endGame(winner) {
     if (winner != null) {
         // announce winner
-        document.getElementById("announcementText").innerText = winner + " Wins!"
+        if (winner == player.HUMAN) {
+            document.getElementById("announcementText").innerText = "You Win! (but do you really?)"
+        } else {
+            document.getElementById("announcementText").innerText = "You Lost? What? How?"
+        }
     } else {
         // announce tie
         document.getElementById("announcementText").innerText = "It's a tie!"
@@ -160,7 +164,22 @@ function minimax(board, isMaximizing) {
             case boardStates.TIE:
                 return 0
             case boardStates.NEUTRAL:
-                // handle below
+                // actively search for the WORST MOVE
+                let bestScore = Infinity
+                for (let i = 0; i < numRows; i++) {
+                    for (let j = 0; j < numCols; j++) {
+                        // only look at moves that are possible
+                        if (board[i][j] == ' ') {
+                            board[i][j] = player.COMPUTER
+                            let score = minimax(board, false)
+                            board[i][j] = ' '
+                            if (score < bestScore) {
+                                bestScore = score
+                            }
+                        }
+                    }
+                }
+                return bestScore
         }
     } else {
         switch(getBoardState(board, player.COMPUTER)) {
@@ -169,25 +188,24 @@ function minimax(board, isMaximizing) {
             case boardStates.TIE:
                 return 0
             case boardStates.NEUTRAL:
-                // handle below
-        }
-    }
-
-    let bestScore = Infinity
-    for (let i = 0; i < numRows; i++) {
-        for (let j = 0; j < numCols; j++) {
-            // only look at moves that are possible
-            if (board[i][j] == ' ') {
-                board[i][j] = isMaximizing ? player.COMPUTER : player.HUMAN
-                let score = minimax(board, (isMaximizing != true))
-                board[i][j] = ' '
-                if (score < bestScore) {
-                    bestScore = score
+                // actively search for the WORST MOVE
+                let bestScore = -Infinity
+                for (let i = 0; i < numRows; i++) {
+                    for (let j = 0; j < numCols; j++) {
+                        // only look at moves that are possible
+                        if (board[i][j] == ' ') {
+                            board[i][j] = player.HUMAN
+                            let score = minimax(board, true)
+                            board[i][j] = ' '
+                            if (score > bestScore) {
+                                bestScore = score
+                            }
+                        }
+                    }
                 }
-            }
+                return bestScore
         }
     }
-    return bestScore
 }
 
 function printBoard(board) {
